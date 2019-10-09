@@ -31,7 +31,13 @@ class CumulativePoetryTest {
     @Test
     void givenDayFive_WhenPoem_ThenShouldShowDayFivePoem() {
         CumulativePoetry poetry = new CumulativePoetry();
-        assertEquals("This is  the dog that worried\nthe cat that killed\nthe rat that ate\nthe malt that lay in\nthe house that Jack built", poetry.poetry(5));
+        String poem="This is the dog that worried\nthe cat that killed\nthe rat that ate\nthe malt that lay in\nthe house that Jack built";
+        assertEquals(poem, poetry.poetry(5));
     }
-
+    @Test
+    void givenDaySix_WhenPoem_ThenShouldShowDaySixPoem() {
+        CumulativePoetry poetry = new CumulativePoetry();
+        String poem="This is that cow with the crumpled horn that tossed\nthe dog that worried\nthe cat that killed\nthe rat that ate\nthe malt that lay in\nthe house that Jack built";
+        assertEquals(poem, poetry.poetry(6));
+    }
 }
