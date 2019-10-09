@@ -1,3 +1,5 @@
+import java.util.jar.Manifest
+
 plugins {
     id 'java'
 }
@@ -8,6 +10,11 @@ version '1.0-SNAPSHOT'
 sourceCompatibility = JavaVersion.VERSION_11
 repositories {
     mavenCentral()
+}
+jar {
+    manifest {
+        attributes "Main-Class": "com.thoughtworks.bridelabz.Main"
+    }
 }
 test {
     useJUnitPlatform()

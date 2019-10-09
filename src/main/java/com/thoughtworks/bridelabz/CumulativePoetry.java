@@ -14,23 +14,10 @@ public class CumulativePoetry {
             "the farmer sowing his corn that kept\n",
             "the horse and the hound and the horn that belonged to\n"};
 
-    public static void main(String[] args) {
-        String cmd = null;
-        int day;
-        if (args.length == 2) {
-            cmd = args[0];
-            day = Integer.parseInt(args[1]);
-        } else {
-            day = Integer.parseInt(args[0]);
-        }
-        CumulativePoetry poet = new CumulativePoetry();
-        System.out.println(poet.poetry(day,cmd));
-    }
-
-    public String poetry(int day,String cmd) {
+    public String poetry(int day,boolean duplicate) {
         StringBuilder temp = new StringBuilder("This is ");
         for (int i = day; i > 0; i--) {
-            if (cmd!=null&&cmd.equals("--echo")){
+            if (duplicate){
                 temp.append(poem[i - 1]);
             }
             temp.append(poem[i - 1]);

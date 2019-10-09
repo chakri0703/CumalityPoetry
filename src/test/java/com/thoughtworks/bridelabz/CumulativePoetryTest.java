@@ -8,46 +8,46 @@ class CumulativePoetryTest {
     @Test
     void givenDayOne_WhenPoem_ThenShouldShowDayOnePoem() {
         CumulativePoetry poetry = new CumulativePoetry();
-        assertEquals("This is the house that Jack built\n", poetry.poetry(1,null));
+        assertEquals("This is the house that Jack built\n", poetry.poetry(1,false));
     }
 
     @Test
     void givenDayTwo_WhenPoem_ThenShouldShowDayTwoPoem() {
         CumulativePoetry poetry = new CumulativePoetry();
-        assertEquals("This is the malt that lay in\nthe house that Jack built\n", poetry.poetry(2,null));
+        assertEquals("This is the malt that lay in\nthe house that Jack built\n", poetry.poetry(2,false));
     }
 
     @Test
     void givenDayThree_WhenPoem_ThenShouldShowDayThreePoem() {
         CumulativePoetry poetry = new CumulativePoetry();
-        assertEquals("This is the rat that ate\nthe malt that lay in\nthe house that Jack built\n", poetry.poetry(3,null));
+        assertEquals("This is the rat that ate\nthe malt that lay in\nthe house that Jack built\n", poetry.poetry(3,false));
     }
 
     @Test
     void givenDayFour_WhenPoem_ThenShouldShowDayFourPoem() {
         CumulativePoetry poetry = new CumulativePoetry();
-        assertEquals("This is the cat that killed\nthe rat that ate\nthe malt that lay in\nthe house that Jack built\n", poetry.poetry(4,null));
+        assertEquals("This is the cat that killed\nthe rat that ate\nthe malt that lay in\nthe house that Jack built\n", poetry.poetry(4,false));
     }
 
     @Test
     void givenDayFive_WhenPoem_ThenShouldShowDayFivePoem() {
         CumulativePoetry poetry = new CumulativePoetry();
         String poem = "This is the dog that worried\nthe cat that killed\nthe rat that ate\nthe malt that lay in\nthe house that Jack built\n";
-        assertEquals(poem, poetry.poetry(5,null));
+        assertEquals(poem, poetry.poetry(5,false));
     }
 
     @Test
     void givenDaySix_WhenPoem_ThenShouldShowDaySixPoem() {
         CumulativePoetry poetry = new CumulativePoetry();
         String poem = "This is that cow with the crumpled horn that tossed\nthe dog that worried\nthe cat that killed\nthe rat that ate\nthe malt that lay in\nthe house that Jack built\n";
-        assertEquals(poem, poetry.poetry(6,null));
+        assertEquals(poem, poetry.poetry(6,false));
     }
 
     @Test
     void givenDaySeven_WhenPoem_ThenShouldShowDaySevenPoem() {
         CumulativePoetry poetry = new CumulativePoetry();
         String poem = "This is the maiden all forlorn that milked\nthat cow with the crumpled horn that tossed\nthe dog that worried\nthe cat that killed\nthe rat that ate\nthe malt that lay in\nthe house that Jack built\n";
-        assertEquals(poem, poetry.poetry(7,null));
+        assertEquals(poem, poetry.poetry(7,false));
     }
     @Test
     void givenDayTwelve_WhenPoem_ThenShouldShowDayTwelvePoem() {
@@ -64,13 +64,13 @@ class CumulativePoetryTest {
                 "the rat that ate\n" +
                 "the malt that lay in\n" +
                 "the house that Jack built\n";
-        assertEquals(poem, poetry.poetry(12,null));
+        assertEquals(poem, poetry.poetry(12,false));
     }
 
     @Test
     void givenDayOneAndEchoCmd_WhenPoem_ThenShouldShowDuplicateLines() {
         CumulativePoetry poetry = new CumulativePoetry();
         String  poem="This is the house that Jack built\nthe house that Jack built\n";
-        assertEquals(poem, poetry.poetry(1,"--echo"));
+        assertEquals(poem, poetry.poetry(1,true));
     }
 }
