@@ -20,5 +20,10 @@ public class CumulativePoetryTest {
         CumulativePoetry poetry=new CumulativePoetry();
         assertEquals("This is the rat that ate\nthe malt that lay in\nthe house that Jack built",poetry.poetry(3));
     }
+    @Test
+    void givenDayFour_WhenPoem_ThenShouldShowDayFourPoem(){
+        CumulativePoetry poetry=new CumulativePoetry();
+        assertEquals("This is the cat that killed\nthe rat that ate\nthe malt that lay in\nthe house that Jack built",poetry.poetry(4));
+    }
 
 }

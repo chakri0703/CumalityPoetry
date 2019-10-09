@@ -1,7 +1,7 @@
 package com.thoughtworks.bridelabz;
 
 public class CumulativePoetry {
-    String[]  poem={"the house that Jack built","the malt that lay in\n","the rat that ate\n"};
+    String[]  poem={"the house that Jack built","the malt that lay in\n","the rat that ate\n","the cat that killed\n"};
 
     public static void main(String[] args) {
         CumulativePoetry poet=new CumulativePoetry();
